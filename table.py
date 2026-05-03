@@ -10,14 +10,14 @@ screen.fill((255, 255, 255))
 color = "red"
 fields = {}
 
-for i in range(11):
+for i in range(7):
 	k = i
 
 	pygame.draw.polygon(screen, (0, 0, 0), [[50 + 32*k, 50 + 64*i], [18 + 32*k, 74 + 64*i], [18 + 32*k, 114 + 64*i], [50 + 32*k, 138 + 64*i], [82 + 32*k, 114 + 64*i], [82 + 32*k, 74 + 64*i]], 5)
 	pygame.draw.circle(screen, (0, 0, 0), [50 + 32*k, 94 + 64*i], 32, 5)
 	fields.update({(50 + 32*k, 94 + 64*i):"white"})
 
-	for j in range(1, 11):
+	for j in range(1, 7):
 		pygame.draw.polygon(screen, (0, 0, 0), [[50 + 64*j + 32*k, 50 + 64*i], [18 + 64*j + 32*k, 74 + 64*i], [18 + 64*j + 32*k, 114 + 64*i], [50 + 64*j + 32*k, 138 + 64*i], [82 + 64*j + 32*k, 114 + 64*i], [82 + 64*j + 32*k, 74 + 64*i]], 5)
 		pygame.draw.circle(screen, (0, 0, 0), [50 + 64*j + 32*k, 94 + 64*i], 32, 5)
 		fields.update({(50 + 64*j + 32*k, 94 + 64*i):"white"})
@@ -40,14 +40,14 @@ while True:
 							fields[p] = "blue"
 							color = "red"
 
-	for i in range(11):
+	for i in range(7):
 		k = i
 		if fields[(50 + 32*k, 94 + 64*i)] == "blue":
 			pygame.draw.polygon(screen, (0, 0, 255), [[50 + 32*k, 50 + 64*i], [18 + 32*k, 74 + 64*i], [18 + 32*k, 114 + 64*i], [50 + 32*k, 138 + 64*i], [82 + 32*k, 114 + 64*i], [82 + 32*k, 74 + 64*i]])
 		elif fields[(50 + 32*k, 94 + 64*i)] == "red":
 			pygame.draw.polygon(screen, (255, 0, 0), [[50 + 32*k, 50 + 64*i], [18 + 32*k, 74 + 64*i], [18 + 32*k, 114 + 64*i], [50 + 32*k, 138 + 64*i], [82 + 32*k, 114 + 64*i], [82 + 32*k, 74 + 64*i]])
 
-		for j in range(1, 11):
+		for j in range(1, 7):
 			if fields[(50 + 64*j + 32*k, 94 + 64*i)] == "blue":
 				pygame.draw.polygon(screen, (0, 0, 255), [[50 + 64*j + 32*k, 50 + 64*i], [18 + 64*j + 32*k, 74 + 64*i], [18 + 64*j + 32*k, 114 + 64*i], [50 + 64*j + 32*k, 138 + 64*i], [82 + 64*j + 32*k, 114 + 64*i], [82 + 64*j + 32*k, 74 + 64*i]])
 			elif fields[(50 + 64*j + 32*k, 94 + 64*i)] == "red":

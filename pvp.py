@@ -69,7 +69,7 @@ while running:
 		if event.type == pygame.MOUSEBUTTONDOWN:
 			for p in pos:
 				if ((mouse[0] - (50 + 64*p[1] + 32*p[0]))**2 + (mouse[1] - (94 + 64*p[0]))**2)**(1/2) <= 32:
-					if fields[p] == "white":
+					if fields[p] == "white" and not red_won and not blue_won:
 						if color == "red":
 							fields[p] = "red"
 
@@ -90,7 +90,6 @@ while running:
 
 							if red_won:
 								print("Red won the game.")
-								running = False
 							else:
 								color = "blue"
 						else:
@@ -113,7 +112,6 @@ while running:
 
 							if blue_won:
 								print("Blue won the game.")
-								running = False
 							else:
 								color = "red"
 

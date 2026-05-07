@@ -1,6 +1,7 @@
 import pygame
 from pygame.locals import *
 from collections import defaultdict
+
 ###
 import sys 
 
@@ -39,9 +40,9 @@ fields = {}
 blue_graph = Graph()
 red_graph = Graph()
 red_start = [(0, f) for f in range(BOARD_SIZE)]
-red_end = [(BOARD_SIZE-1, g) for g in range(BOARD_SIZE)]
+red_end = [(BOARD_SIZE - 1, g) for g in range(BOARD_SIZE)]
 blue_start = [(h, 0) for h in range(BOARD_SIZE)]
-blue_end = [(d, BOARD_SIZE-1) for d in range(BOARD_SIZE)]
+blue_end = [(d, BOARD_SIZE - 1) for d in range(BOARD_SIZE)]
 red_won = False
 blue_won = False
 

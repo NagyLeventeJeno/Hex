@@ -1,3 +1,4 @@
+import subprocess
 import tkinter as tk
 from tkinter import messagebox
 import math
@@ -39,14 +40,24 @@ class HexGameApp:
     def init_game(self, size):
         self.size = size
         self.clear_screen()
-        adatok = f"Mód: {self.mode} játékos | Méret: {self.size}x{self.size}"
-        tk.Label(self.main_frame, text=adatok, font=("Arial", 12)).pack(pady=5)
-        tk.Label(self.main_frame, text="jáááték!", font=("Arial", 16)).pack(pady=20)
-
-        #A program további része
-
-        tk.Button(self.main_frame, text="Vissza a menübe", command=self.show_menu).pack(pady=10)
         
+        if self.mode == 2:
+            self.start_pvp_process()
+            self.show_menu() 
+        else:
+            tk.Label(self.main_frame, text="FEJLESZTÉS ALATT", font=("Arial", 20, "bold"), fg="red").pack(pady=50)
+            tk.Button(self.main_frame, text="Vissza a menübe", width=20, command=self.show_menu).pack()
+
+    def start_pvp_process(self):
+        try:
+            import subprocess
+          
+            self.root.withdraw() 
+            subprocess.run(["python", "pvp.py", str(self.size)])
+            self.root.deiconify()
+        except Exception as e:
+            self.root.deiconify() 
+            messagebox.showerror("Hiba", f"Hiba történt: {e}")
 
 if __name__ == "__main__":
     root = tk.Tk()

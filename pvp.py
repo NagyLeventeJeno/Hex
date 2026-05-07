@@ -1,10 +1,18 @@
 import pygame
 from pygame.locals import *
 from collections import defaultdict
+###
+import sys 
+
+try:
+    BOARD_SIZE = int(sys.argv[1])
+except (IndexError, ValueError):
+    BOARD_SIZE = 7
+###
 
 pygame.init()
 
-screen = pygame.display.set_mode((700, 700))
+screen = pygame.display.set_mode((BOARD_SIZE*100, 800)) ###
 
 class Graph:
 	def __init__(self):
@@ -30,21 +38,21 @@ color = "red"
 fields = {}
 blue_graph = Graph()
 red_graph = Graph()
-red_start = [(0, f) for f in range(7)]
-red_end = [(6, g) for g in range(7)]
-blue_start = [(h, 0) for h in range(7)]
-blue_end = [(d, 6) for d in range(7)]
+red_start = [(0, f) for f in range(BOARD_SIZE)]
+red_end = [(BOARD_SIZE-1, g) for g in range(BOARD_SIZE)]
+blue_start = [(h, 0) for h in range(BOARD_SIZE)]
+blue_end = [(d, BOARD_SIZE-1) for d in range(BOARD_SIZE)]
 red_won = False
 blue_won = False
 
-for i in range(7):
+for i in range(BOARD_SIZE):
 	k = i
 
 	pygame.draw.polygon(screen, (0, 0, 0), [[50 + 32*k, 50 + 64*i], [18 + 32*k, 74 + 64*i], [18 + 32*k, 114 + 64*i], [50 + 32*k, 138 + 64*i], [82 + 32*k, 114 + 64*i], [82 + 32*k, 74 + 64*i]], 5)
 	pygame.draw.circle(screen, (0, 0, 0), [50 + 32*k, 94 + 64*i], 32, 5)
 	fields.update({(i, 0):"white"})
 
-	for j in range(1, 7):
+	for j in range(1, BOARD_SIZE):
 		pygame.draw.polygon(screen, (0, 0, 0), [[50 + 64*j + 32*k, 50 + 64*i], [18 + 64*j + 32*k, 74 + 64*i], [18 + 64*j + 32*k, 114 + 64*i], [50 + 64*j + 32*k, 138 + 64*i], [82 + 64*j + 32*k, 114 + 64*i], [82 + 64*j + 32*k, 74 + 64*i]], 5)
 		pygame.draw.circle(screen, (0, 0, 0), [50 + 64*j + 32*k, 94 + 64*i], 32, 5)
 		fields.update({(i, j):"white"})
@@ -108,7 +116,7 @@ while running:
 							else:
 								color = "red"
 
-	for i in range(7):
+	for i in range(BOARD_SIZE):
 		k = i
 		if fields[(i, 0)] == "blue":
 			pygame.draw.polygon(screen, (0, 0, 255), [[50 + 32*k, 50 + 64*i], [18 + 32*k, 74 + 64*i], [18 + 32*k, 114 + 64*i], [50 + 32*k, 138 + 64*i], [82 + 32*k, 114 + 64*i], [82 + 32*k, 74 + 64*i]])

@@ -123,7 +123,7 @@ while running:
 		elif fields[(i, 0)] == "red":
 			pygame.draw.polygon(screen, (255, 0, 0), [[50 + 32*k, 50 + 64*i], [18 + 32*k, 74 + 64*i], [18 + 32*k, 114 + 64*i], [50 + 32*k, 138 + 64*i], [82 + 32*k, 114 + 64*i], [82 + 32*k, 74 + 64*i]])
 
-		for j in range(1, 7):
+		for j in range(1, BOARD_SIZE):
 			if fields[(i, j)] == "blue":
 				pygame.draw.polygon(screen, (0, 0, 255), [[50 + 64*j + 32*k, 50 + 64*i], [18 + 64*j + 32*k, 74 + 64*i], [18 + 64*j + 32*k, 114 + 64*i], [50 + 64*j + 32*k, 138 + 64*i], [82 + 64*j + 32*k, 114 + 64*i], [82 + 64*j + 32*k, 74 + 64*i]])
 			elif fields[(i, j)] == "red":

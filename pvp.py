@@ -76,7 +76,7 @@ while running:
 							for i in range(p[0] - 1, p[0] + 2):
 								for j in range(p[1] - 1, p[1] + 2):
 									if i >= 0 and j >= 0 and i < BOARD_SIZE and j < BOARD_SIZE:
-										if not (i == p[0] and j == p[1]):
+										if not (i == p[0] and j == p[1]) and not (i == p[0] - 1 and j == p[1] - 1) and not (i == p[0] + 1 and j == p[1] + 1):
 											if fields[(i, j)] == "red":
 												red_graph.addEdge((p[0], p[1]), (i, j))
 												red_graph.addEdge((i, j), (p[0], p[1]))
@@ -98,7 +98,7 @@ while running:
 							for i in range(p[0] - 1, p[0] + 2):
 								for j in range(p[1] - 1, p[1] + 2):
 									if i >= 0 and j >= 0 and i < BOARD_SIZE and j < BOARD_SIZE:
-										if not (i == p[0] and j == p[1]):
+										if not (i == p[0] and j == p[1]) and not (i == p[0] - 1 and j == p[1] - 1) and not (i == p[0] + 1 and j == p[1] + 1):
 											if fields[(i, j)] == "blue":
 												blue_graph.addEdge((p[0], p[1]), (i, j))
 												blue_graph.addEdge((i, j), (p[0], p[1]))

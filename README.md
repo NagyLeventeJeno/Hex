@@ -17,3 +17,20 @@ A piros játékos kezd, utána a kék és így tovább.
 Ha az egyik játékos az egyik mezőt "beszínezte", akkor azt már nem lehet megváltoztatni.
 A játékosok célja, hogy a tábla két szemközti oldalát összekössék egy összefüggő vonallal a saját színükből (a vonalat az egymás mellett lévő azonos színű mezők adják).
 A piros játékosnak a tábla tetejét kell az aljával összekötnie, a kék játékosnak a tábla jobb oldalát a bal oldalával.
+Futtatás:
+A játék futtatásához az alábbi fájlok szükségesek:
+- startmenu.py
+- pvp.py
+- bot.py
+A startmenu.py elindításával megjelenik a menü, ahol két lehetőség közül választhatunk: egyjátékos mód vagy kétjátékos mód.
+A kétjátékos mód kiválsztása után három gomb jelenik meg: 7x7, 11x11, vissza.
+A 7x7 és a 11x11 a játéktábla választható méretei, a vissza gomb visszavisz a startmenübe.
+Ha kiválasztjuk valamelyik méretet, akkor elindul a pvp.py fájl a kiválsztott táblamérettel.
+Ha az egyjátékos módot választjuk, akkor elindul a bot.py fájl 7x7-es táblamérettel.
+Amikor valaki megnyeri a játékot, a játék kiírja, hogy ki nyert, majd utána az ablak nem záródik be, így megtekinthető a nyertes állás, de tovább kattintani már nem lehet.
+Az ablakot a piros gombbal lehet bezárni, ekkor visszakerülünk a startmenübe.
+A játék futása közben az "m" billentyű megnyomásával visszaléphetünk a startmenübe, az "r" billentyű megnyomásával pedig új játékot kezdhetünk.
+Játékos lépése:
+A játékos egy üres mezőbe tud kattintani, amibe bele van rajzolva egy kör. A kattintás csak akkor érvényes, ha az a körön belül történik.
+Ekkor a mező beszíneződik a játékos színére és többé nem lehet rá kattintani.
+Ezután a következő szín jön.

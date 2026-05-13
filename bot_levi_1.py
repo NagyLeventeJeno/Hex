@@ -48,14 +48,12 @@ blue_won = False
 def update_values():
 	for i in range(7):
 		for j in range(7):
-			if (i == 1 and j == 4) or (i == 5 and j == 2) or (i == 2 and j == 2) or (i == 4 and j == 4):
-				values[(i, j)] = 0
-			elif fields[(i,j)] == "blue":
+			if fields[(i,j)] == "blue":
 				values[(i,j)] = 1000000
 			elif fields[(i,j)] == "white":
-				values[(i,j)] = 100
+				values[(i,j)] = 1
 			elif fields[(i,j)] == "red":
-				values[(i,j)] = 10
+				values[(i,j)] = 0
 
 def get_neighbors(pos):
 	i, j = pos

@@ -22,6 +22,7 @@ A játék futtatásához az alábbi fájlok szükségesek:
   - startmenu.py
   - pvp.py
   - bot.py
+
 A startmenu.py elindításával megjelenik a menü, ahol két lehetőség közül választhatunk: egyjátékos mód vagy kétjátékos mód.
 A kétjátékos mód kiválsztása után három gomb jelenik meg: 7x7, 11x11, vissza.
 A 7x7 és a 11x11 a játéktábla választható méretei, a vissza gomb visszavisz a startmenübe.

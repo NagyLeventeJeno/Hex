@@ -44,14 +44,15 @@ class HexGameApp:
         if self.mode == 2:
             self.start_pvp_process()
             self.show_menu() 
+        elif self.mode == 1 and self.size == 7:
+            self.start_bot_process()
+            self.show_menu()
         else:
             tk.Label(self.main_frame, text="FEJLESZTÉS ALATT", font=("Arial", 20, "bold"), fg="red").pack(pady=50)
             tk.Button(self.main_frame, text="Vissza a menübe", width=20, command=self.show_menu).pack()
 
     def start_pvp_process(self):
         try:
-            import subprocess
-          
             self.root.withdraw() 
             subprocess.run(["python", "pvp.py", str(self.size)])
             self.root.deiconify()
@@ -59,6 +60,14 @@ class HexGameApp:
             self.root.deiconify() 
             messagebox.showerror("Hiba", f"Hiba történt: {e}")
 
+    def start_bot_process(self):
+        try:            
+            self.root.withdraw() 
+            subprocess.run(["python", "bot_levi_1.py"])
+            self.root.deiconify()
+        except Exception as e:
+            self.root.deiconify() 
+            messagebox.showerror("Hiba", f"Hiba történt: {e}")
 if __name__ == "__main__":
     root = tk.Tk()
     app = HexGameApp(root)

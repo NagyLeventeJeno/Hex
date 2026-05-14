@@ -25,6 +25,7 @@ A játék egyik módja mikor a gép ellen játszunk. A számítógép kezd, majd
 A gép agyának működése: 
   A különböző színű mezőkhöz értékeket rendel, a számára kedvező piros mezőket beállítja 0 értkűre, a fehér mezőknek 1 lesz a súlya, míg az ellenfél, kék mezőinek nagy értéket ad, annak érdekében hogy azt elkerülje a legrövidebb út megkonstruálása során. A gép tulajdonképpen egy Dijkstra-algoritmus használ. A shortest_path() függvénnyel visszaadja az optimális útvonalat, majd a reconstruct_path() visszafejti mezőről mezőre és meglépi a megfelelőt és ezt hajtja végre újra és újra mikor sorrakerül
 
+<img width="677" height="564" alt="Képernyőfotó 2026-05-14 - 23 26 51" src="https://github.com/user-attachments/assets/fc3daa0d-ea9e-4f6b-ba8b-f9cb79a64ba9" />
 
 ___________________________________________
 

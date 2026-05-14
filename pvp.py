@@ -130,5 +130,29 @@ while running:
 
 	mouse = pygame.mouse.get_pos()
 	pygame.display.update()
+	
+	if red_won or blue_won:
+			winner_color = (255, 0, 0) if red_won else (0, 0, 255)
+			winner_name = "PIROS" if red_won else "KEK"
 
+			font = pygame.font.SysFont("Arial", 30, bold=True)
+			text = font.render(f"{winner_name} NYERT! [R] = új játek | [M] = Menü", True, winner_color)
+			screen.blit(text, (350 - text.get_width() // 2, 20)) 
+			pygame.display.update()
+
+			waiting = True
+			while waiting:
+				for event in pygame.event.get():
+					if event.type == pygame.QUIT:
+						pygame.quit()
+						sys.exit()
+
+					if event.type == pygame.KEYDOWN:
+						if event.key == pygame.K_r: 
+							os.execv(sys.executable, ['python'] + sys.argv)
+
+						if event.key == pygame.K_m: 
+							waiting = False
+							running = False
+												
 pygame.quit()

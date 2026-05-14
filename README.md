@@ -3,7 +3,7 @@ Hex játék:
 Kende része:
 
 Telepítés és előfeltételek:
-A program futtatásához Python 3.x verzióra van szükség. A grafikai megjelenítéshez a pygame és a tkinter könyvtárakat használjuk. A pygame telepíthető a pip install pygame paranccsal. A tkinter a legtöbb Python telepítésnek alapból része, de ha hiányozna, Linuxon a sudo apt-get install python3-tk paranccsal telepíthető.
+A program futtatásához Python 3.x verzióra van szükség. A grafikai megjelenítéshez a pygame és a tkinter könyvtárakat használjuk. A pygame telepíthető a "pip install pygame" paranccsal. A tkinter a legtöbb Python telepítésnek alapból része, de ha hiányozna, Linuxon a "sudo apt-get install python3-tk" paranccsal telepíthető.
 
 A játék futtatása:
 A játék indításához a startmenu.py programot kell futtatni. A grafikus menün keresztül választható ki az egy- vagy kétszemélyes játékmód, valamint a különböző táblaméretek (7x7 vagy 11x11).

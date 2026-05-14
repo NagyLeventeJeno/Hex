@@ -63,7 +63,7 @@ class HexGameApp:
     def start_bot_process(self):
         try:            
             self.root.withdraw() 
-            subprocess.run(["python", "bot_levi_1.py"])
+            subprocess.run(["python", "bot.py"])
             self.root.deiconify()
         except Exception as e:
             self.root.deiconify() 

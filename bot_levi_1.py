@@ -7,6 +7,8 @@ import sys
 
 pygame.init()
 
+screen = pygame.display.set_mode((700, 700))
+
 class Graph:
 	def __init__(self):
 		self.graph = defaultdict(list)

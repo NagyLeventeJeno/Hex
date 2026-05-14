@@ -26,10 +26,13 @@ A gép agyának működése:
   A különböző színű mezőkhöz értékeket rendel, a számára kedvező piros mezőket beállítja 0 értkűre, a fehér mezőknek 1 lesz a súlya, míg az ellenfél, kék mezőinek nagy értéket ad, annak érdekében hogy azt elkerülje a legrövidebb út megkonstruálása során. A gép tulajdonképpen egy Dijkstra-algoritmus használ. A shortest_path() függvénnyel visszaadja az optimális útvonalat, majd a reconstruct_path() visszafejti mezőről mezőre és meglépi a megfelelőt és ezt hajtja végre újra és újra mikor sorrakerül
 
 <img width="677" height="564" alt="Képernyőfotó 2026-05-14 - 23 26 51" src="https://github.com/user-attachments/assets/fc3daa0d-ea9e-4f6b-ba8b-f9cb79a64ba9" />
+
 A gép egyből középre tesz, ami stratégiai szempontból a lehető legjobb első lépés, a sok irány megynílása miatt
+
 
 <img width="679" height="645" alt="Képernyőfotó 2026-05-14 - 23 25 21" src="https://github.com/user-attachments/assets/dfc7fa00-37d2-45cd-9a70-59dec1da9798" />
 <img width="678" height="575" alt="Képernyőfotó 2026-05-14 - 23 25 59" src="https://github.com/user-attachments/assets/d90e4549-69c7-4179-a42b-49ca6a447ce8" />
+
 A stratégia további része, az úgynevezet hidak kialakítása, amely lehetővé teszi a gép számára hogy bebiztosítsa az útvonalát
 
 ___________________________________________

@@ -32,7 +32,7 @@ A piros játékosnak a tábla tetejét kell az aljával összekötnie, a kék j�
 
 Futtatás:
 
-A játék futtatásához az alábbi fájlok szükségesek:
+A játék futtatásához az alábbi fájlok szükségesek(egy mappában):
   - startmenu.py
   - pvp.py
   - bot.py

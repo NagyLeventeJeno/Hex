@@ -17,6 +17,15 @@ ___________________________________________
 
 Mátyás része:
 
+A játék egyik módja mikor a gép ellen játszunk. A számítógép kezd, majd játék során a több stratégiát is alkalmaz a legyőzésünkre:
+- megpróbálja akadályozni a kék (saját szín) útját, úgy hogy érzékeli, ha egy meglévő piros korong mellé teszünk egy kéket
+- be vannak táplálva bizonyos stratégiai szempontból fontos koordinátájú mezők, amiket választását előnyben részesíti a gép, ilyenek pl. (1,4), (5,2), (2,2), (4,4)
+- miután a fönti szabályokból már nem jön ki új lépés, gép "agya" veszi át az irányítást; itt a gép a legrövidebb utat kezdi el keresni a győzelméhez
+
+A gép agyának működése: 
+  A különböző színű mezőkhöz értékeket rendel, a számára kedvező piros mezőket beállítja 0 értkűre, a fehér mezőknek 1 lesz a súlya, míg az ellenfél, kék mezőinek nagy értéket ad, annak érdekében hogy azt elkerülje a legrövidebb út megkonstruálása során. A gép tulajdonképpen egy Dijkstra-algoritmus használ. A shortest_path() függvénnyel visszaadja az optimális útvonalat, majd a reconstruct_path() visszafejti mezőről mezőre és meglépi a megfelelőt és ezt hajtja végre újra és újra mikor sorrakerül
+
+
 ___________________________________________
 
 Levi része:

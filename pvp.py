@@ -1,13 +1,13 @@
 import pygame
 from pygame.locals import *
 from collections import defaultdict
-import sys 
+import sys
+import os
 
 try:
     BOARD_SIZE = int(sys.argv[1])
 except (IndexError, ValueError):
     BOARD_SIZE = 7
-
 
 pygame.init()
 

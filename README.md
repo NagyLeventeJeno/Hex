@@ -21,9 +21,9 @@ Fontos: A program megfelelő működéséhez a startmenu.py, pvp.py és a bot.py
 
 Irányítás és lehetőségek:
 
-- Korong elhelyezése: Egérkattintással a választott mezőre.
-- Újrajátszás: A játék végén, az 'R' billentyű megnyomásával a játék azonnal újraindul, azonos beállításokkal.
-- Visszatérés a menübe: Az 'M' billentyű megnyomásával kiléphetünk a menübe, ahol új játékmódot vagy méretet választhatunk.
+- korong elhelyezése: egérkattintással a választott mezőre
+- újrajátszás: a játék végén, az 'R' billentyű megnyomásával a játék azonnal újraindul, azonos beállításokkal
+- visszatérés a menübe: az 'M' billentyű megnyomásával kiléphetünk a menübe, ahol új játékmódot vagy méretet választhatunk
 
 Játékos lépése:
 

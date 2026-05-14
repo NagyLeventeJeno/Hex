@@ -71,7 +71,7 @@ def shortest_path():
 	nodes = {(i,j): Vertex((i,j)) for i in range(7) for j in range(7)}
 	pq = []
 	for i in range(7):
-		start_nodes = (i, 3)
+		start_nodes = (0, i) #innen indul az útkeresés
 		if fields[start_nodes] != "blue":
 			dist = values[start_nodes]
 			nodes[start_nodes].distance = dist
@@ -80,7 +80,7 @@ def shortest_path():
 		dist, opt = heapq.heappop(pq)
 		if dist > nodes[opt].distance:
 			continue
-		if opt[1] == 6:
+		if opt[0] == 6: #opt[1] helyett 0
 			return reconstruct_path(nodes, opt)
 		for neighbors_pos in get_neighbors(opt):
 			new_distance = nodes[opt].distance + values[neighbors_pos]
@@ -91,7 +91,7 @@ def shortest_path():
 	return None
 				
 def reconstruct_path(nodes, opt):
-	if opt[1] == 6:
+	if opt[0] == 6: #opt[1] helyett 0, a cél a legalsó sor
 		path = []
 		current_node = opt
 		while current_node is not None:

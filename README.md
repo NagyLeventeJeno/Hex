@@ -27,7 +27,7 @@ A gép agyának működése:
 
 <img width="677" height="564" alt="Képernyőfotó 2026-05-14 - 23 26 51" src="https://github.com/user-attachments/assets/fc3daa0d-ea9e-4f6b-ba8b-f9cb79a64ba9" />
 
-A gép egyből középre tesz, ami stratégiai szempontból a lehető legjobb első lépés, a sok irány megynílása miatt
+A gép egyből középre tesz, ami stratégiai szempontból a lehető legjobb első lépés, a sok irány megnyílása miatt
 
 
 <img width="679" height="645" alt="Képernyőfotó 2026-05-14 - 23 25 21" src="https://github.com/user-attachments/assets/dfc7fa00-37d2-45cd-9a70-59dec1da9798" />
